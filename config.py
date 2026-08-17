@@ -1,5 +1,13 @@
-﻿import os
+import os
 from pathlib import Path
+
+# load .env file if it exists (copy .env.example -> .env and fill in your key)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parent / ".env")
+except ImportError:
+    pass  # python-dotenv not installed, fall back to system env vars
+
 
 # paths
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -233,10 +241,12 @@ LABEL_ALIASES = {
     "wild_dog":         "dog",
 }
 
-# 3. ROBOFLOW CONFIGURATION
-# API key — reads from env var first, falls back to hardcoded.
-# For production: set ROBOFLOW_API_KEY env variable and remove the fallback.
-ROBOFLOW_API_KEY = os.environ.get("ROBOFLOW_API_KEY", "KFwnyX04GPwLVirSOwXq")
+# Roboflow configuration
+# Set your API key as an environment variable before running collect_data.py:
+#   Windows:  set ROBOFLOW_API_KEY=your_key_here
+#   Linux/Mac: export ROBOFLOW_API_KEY=your_key_here
+# Get your key from: https://app.roboflow.com → Settings → API Keys
+ROBOFLOW_API_KEY = os.environ.get("ROBOFLOW_API_KEY", "")
 
 # Curated list of Roboflow Universe datasets to download.
 # Format: (workspace, project, version, description)

@@ -1,5 +1,9 @@
-﻿# core ML
+# core ML
 ultralytics>=8.3.0
+
+# env file support (for ROBOFLOW_API_KEY)
+python-dotenv>=1.0.0
+
 
 # computer vision
 opencv-python>=4.9.0

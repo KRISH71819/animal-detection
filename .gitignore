@@ -37,3 +37,6 @@ logs.txt
 Thumbs.db
 .vscode/
 .idea/
+
+# local env file with API keys - never commit this
+.env

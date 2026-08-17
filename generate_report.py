@@ -1,7 +1,7 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
-SmartGuard - YOLO11m Training Report Generator
-Generates a comprehensive PDF covering datasets, training config, and evaluation results.
+Animal Guard - YOLO11m Training Report Generator
+Generates a PDF covering datasets, training config, and evaluation results.
 Requires: pip install reportlab
 """
 
@@ -28,7 +28,7 @@ from reportlab.platypus import BalancedColumns
 from datetime import datetime
 from pathlib import Path
 
-# ─── Color Palette (matching SmartGuard brand) ─────────────────────────────
+# report colors
 DARK_BG     = colors.HexColor("#0D1117")
 ACCENT      = colors.HexColor("#00C2FF")
 ACCENT2     = colors.HexColor("#7C3AED")
@@ -42,9 +42,9 @@ DARK_GRAY   = colors.HexColor("#1E293B")
 TEXT_DARK   = colors.HexColor("#0F172A")
 HEADER_BG   = colors.HexColor("#0F172A")
 
-OUTPUT_PATH = Path("C:/Users/KRISH/OneDrive") / "SmartGuard_Training_Report.pdf"
+OUTPUT_PATH = Path("Animal_Guard_Training_Report.pdf")
 
-# ─── Data ──────────────────────────────────────────────────────────────────
+# report data
 DATASETS = [
     ("nilgai-zsiad-s9fov v1",       "visiontest-kcaqk",               "Nilgai object detection"),
     ("cattlespecies v1",             "cattle-buexm",                    "Cattle and buffalo species"),
@@ -238,8 +238,8 @@ def build_pdf():
         pagesize=A4,
         leftMargin=18*mm, rightMargin=18*mm,
         topMargin=15*mm, bottomMargin=18*mm,
-        title="SmartGuard — YOLO11m Training Report",
-        author="SmartGuard Systems Pvt. Ltd.",
+        title="Animal Guard — YOLO11m Training Report",
+        author="Animal Guard Systems Pvt. Ltd.",
         subject="Animal Detection Model — Training & Evaluation Report"
     )
 
@@ -249,12 +249,12 @@ def build_pdf():
 
         # COVER PAGE
         cover_data = [
-        [Paragraph("SmartGuard", styles["cover_title"])],
+        [Paragraph("Animal Guard", styles["cover_title"])],
         [Paragraph("Animal Detection Model", styles["cover_sub"])],
         [Paragraph("Training & Evaluation Report", styles["cover_sub"])],
         [Spacer(1, 6*mm)],
         [Paragraph("YOLO11m &bull; 10-Class Animal Detection &bull; 200 Epochs", styles["cover_meta"])],
-        [Paragraph("SmartGuard Systems Pvt. Ltd.", styles["cover_meta"])],
+        [Paragraph("Animal Guard Systems Pvt. Ltd.", styles["cover_meta"])],
         [Paragraph(f"Generated: {datetime.now().strftime('%d %B %Y')}", styles["cover_meta"])],
     ]
     cover_table = Table(cover_data, colWidths=[W])
@@ -296,8 +296,8 @@ def build_pdf():
         # SECTION 1 — PROJECT OVERVIEW
         story += section_header("1. Project Overview", styles)
     story.append(Paragraph(
-        "SmartGuard is an AI-powered wildlife and livestock intrusion detection system developed by "
-        "SmartGuard Systems Pvt. Ltd. It is designed to protect agricultural fields from crop "
+        "Animal Guard is an AI-powered wildlife and livestock intrusion detection system developed by "
+        "Animal Guard Systems Pvt. Ltd. It is designed to protect agricultural fields from crop "
         "damage caused by wild and domestic animals. The system uses a real-time video stream from "
         "CCTV or IP cameras, applies motion-triggered inference with SAHI (Sliced Aided Hyper "
         "Inference), and alerts farmers when target animals are detected near crops.",
@@ -794,15 +794,15 @@ def build_pdf():
         story.append(Spacer(1, 8*mm))
     story.append(hr(ACCENT, 1.0))
     story.append(Paragraph(
-        f"SmartGuard — YOLO11m Training Report &nbsp;&nbsp;|&nbsp;&nbsp; "
-        f"SmartGuard Systems Pvt. Ltd. &nbsp;&nbsp;|&nbsp;&nbsp; "
+        f"Animal Guard — YOLO11m Training Report &nbsp;&nbsp;|&nbsp;&nbsp; "
+        f"Animal Guard Systems Pvt. Ltd. &nbsp;&nbsp;|&nbsp;&nbsp; "
         f"Generated: {datetime.now().strftime('%d %B %Y, %H:%M')} IST",
         ParagraphStyle("footer", fontSize=8, textColor=colors.HexColor("#94A3B8"),
                        fontName="Helvetica", alignment=TA_CENTER)
     ))
 
     doc.build(story)
-    print("Report saved to: SmartGuard_Training_Report.pdf")
+    print(f"Report saved to: {OUTPUT_PATH}")
 
 if __name__ == "__main__":
     build_pdf()
