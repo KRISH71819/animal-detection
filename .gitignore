@@ -1,0 +1,39 @@
+﻿# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ─── Environments ─────────────────────────────────────────────────────────────
+.env
+.venv
+venv/
+env/
+
+# ─── Training Data (huge — download via collect_data.py) ──────────────────────
+data/raw/
+data/merged/
+data/complete_training_dataset/
+
+# ─── Epoch Checkpoints (too large for GitHub, only keep best.pt via LFS) ──────
+runs-10class-350/atodya_train/weights/epoch*.pt
+runs-10class-350/atodya_train/weights/last.pt
+runs-10class-363/
+runs-10class-377/
+runs/
+
+# ─── Kaggle packaging zips ────────────────────────────────────────────────────
+*.zip
+
+# ─── Logs and scratch ─────────────────────────────────────────────────────────
+logs.txt
+
+# ─── OS / IDE ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

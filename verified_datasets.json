@@ -1,0 +1,104 @@
+[
+  {
+    "workspace": "dheneshwararasu-gmail-com",
+    "project": "monkey-detection-7y1mh",
+    "version": 3,
+    "description": "Monkey detection v3"
+  },
+  {
+    "workspace": "nishad-wttrd",
+    "project": "monkey-detection-w0pyk",
+    "version": 1,
+    "description": "Monkey detection"
+  },
+  {
+    "workspace": "laxmi-shrestha-lypyt",
+    "project": "monkey-detection-system-3d8sm",
+    "version": 1,
+    "description": "Monkey detection system"
+  },
+  {
+    "workspace": "monketdataset",
+    "project": "monkey-detection-9zwei",
+    "version": 1,
+    "description": "Monkey dataset"
+  },
+  {
+    "workspace": "plothole",
+    "project": "monkey-detection-07g3w",
+    "version": 1,
+    "description": "Plothole monkey detection"
+  },
+  {
+    "workspace": "macaque-vct7g",
+    "project": "macaque-detect-7ncnk",
+    "version": 1,
+    "description": "Macaque detect"
+  },
+  {
+    "workspace": "customdataset-aucsj",
+    "project": "asian-elephants-dataset",
+    "version": 1,
+    "description": "Asian elephants dataset"
+  },
+  {
+    "workspace": "ai-xkb2k",
+    "project": "elephant-detection-jzl9g",
+    "version": 1,
+    "description": "Elephant detection"
+  },
+  {
+    "workspace": "new-cgdeg",
+    "project": "elephants-detection-using-yolo-vlyrb",
+    "version": 1,
+    "description": "Elephants detection YOLO"
+  },
+  {
+    "workspace": "fyp-gztsq",
+    "project": "stray-dogs-2wfjc",
+    "version": 1,
+    "description": "Stray dogs 1"
+  },
+  {
+    "workspace": "imaging-system",
+    "project": "stray-dog-control",
+    "version": 1,
+    "description": "Stray dog control"
+  },
+  {
+    "workspace": "visiontest-kcaqk",
+    "project": "nilgai-zsiad-s9fov",
+    "version": 1,
+    "description": "Nilgai"
+  },
+  {
+    "workspace": "cattle-buexm",
+    "project": "cattlespecies",
+    "version": 1,
+    "description": "Cattlespecies"
+  },
+  {
+    "workspace": "trackabox-4ejy9",
+    "project": "wild-boar-a1flm",
+    "version": 1,
+    "description": "Wild boar"
+  },
+  {
+    "workspace": "wrkusuma",
+    "project": "cow-detection-owqvd",
+    "version": 1,
+    "description": "Cow detection"
+  },
+  {
+    "workspace": "team-synora",
+    "project": "cattle-buffalo-other",
+    "version": 1,
+    "description": "Cattle buffalo other"
+  },
+  {
+    "workspace": "puspendu-ai-vision-workspace",
+    "project": "birds-detection-uem1j",
+    "version": 1,
+    "description": "Birds detection"
+  }
+]

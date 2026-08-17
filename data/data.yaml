@@ -1,0 +1,16 @@
+path: "C:\\Users\\KRISH\\OneDrive\\\u6587\u4EF6\\personal project\\Atodya\\data\\\
+  merged"
+train: train/images
+val: val/images
+nc: 10
+names:
+- cow
+- buffalo
+- goat
+- dog
+- wild_boar
+- monkey
+- nilgai
+- elephant
+- deer
+- bird

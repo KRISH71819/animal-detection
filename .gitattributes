@@ -1,0 +1,2 @@
+﻿# Track .pt model files with Git LFS in case any exceed 50 MB
+*.pt filter=lfs diff=lfs merge=lfs -text

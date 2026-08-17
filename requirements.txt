@@ -1,0 +1,28 @@
+﻿# core ML
+ultralytics>=8.3.0
+
+# computer vision
+opencv-python>=4.9.0
+
+# augmentation
+albumentations>=1.4.0
+
+# dataset downloads
+roboflow>=1.1.0
+
+# small object detection (sliced inference)
+sahi>=0.11.0
+
+# export to onnx if needed
+onnx>=1.15.0
+onnxruntime>=1.17.0
+
+# standard utils
+numpy>=1.24.0
+Pillow>=10.0.0
+PyYAML>=6.0
+tqdm>=4.66.0
+
+# visualization and eval
+matplotlib>=3.8.0
+seaborn>=0.13.0
