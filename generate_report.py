@@ -28,7 +28,7 @@ from reportlab.platypus import BalancedColumns
 from datetime import datetime
 from pathlib import Path
 
-# ─── Color Palette (matching SmartGuard brand) ────────────────────────────────
+# ─── Color Palette (matching SmartGuard brand) ─────────────────────────────
 DARK_BG     = colors.HexColor("#0D1117")
 ACCENT      = colors.HexColor("#00C2FF")
 ACCENT2     = colors.HexColor("#7C3AED")
@@ -44,7 +44,7 @@ HEADER_BG   = colors.HexColor("#0F172A")
 
 OUTPUT_PATH = Path("C:/Users/KRISH/OneDrive") / "SmartGuard_Training_Report.pdf"
 
-# ─── Data ─────────────────────────────────────────────────────────────────────
+# ─── Data ──────────────────────────────────────────────────────────────────
 DATASETS = [
     ("nilgai-zsiad-s9fov v1",       "visiontest-kcaqk",               "Nilgai object detection"),
     ("cattlespecies v1",             "cattle-buexm",                    "Cattle and buffalo species"),
@@ -133,7 +133,7 @@ AUGMENTATION_PIPELINE = [
      "horizontal flip 50%, HSV jitter (H:1.5%, S:70%, V:40%)."),
 ]
 
-# ─── Style helpers ─────────────────────────────────────────────────────────────
+# ─── Style helpers ──────────────────────────────────────────────────────────
 
 def make_styles():
     base = getSampleStyleSheet()
@@ -229,7 +229,7 @@ def color_cell(val, thresholds, styles_obj):
                            alignment=TA_CENTER)
     return Paragraph(str(val), style)
 
-# ─── Build PDF ────────────────────────────────────────────────────────────────
+# ─── Build PDF ─────────────────────────────────────────────────────────────
 
 def build_pdf():
     styles = make_styles()

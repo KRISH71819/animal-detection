@@ -5,7 +5,7 @@ from pathlib import Path
 from collections import defaultdict
 
 import cv2
-import numpy as np────────────────────────────
+import numpy as np─────────────────────────
 from config import (
     TARGET_CLASSES,
     CLASS_COLORS,
